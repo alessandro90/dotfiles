@@ -65,6 +65,8 @@ lvim.builtin.which_key.mappings["v"] = { "<C-w>v", "split" }
 lvim.builtin.which_key.mappings["m"] = { "<c-w>|", "maximize split" }
 lvim.builtin.which_key.mappings["M"] = { "<c-w>=", "resize splits" }
 
+lvim.builtin.which_key.mappings["q"] = { ":qa<cr>", "Quit" }
+
 --
 -- lvim.keys.normal_mode["fzf"] = "FzfLua grep"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
