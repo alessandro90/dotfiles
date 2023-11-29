@@ -11,9 +11,9 @@ vim.opt.relativenumber = true
 -- https://github.com/nvim-treesitter/nvim-treesitter#folding
 -- look for foldenable: https://github.com/neovim/neovim/blob/master/src/nvim/options.lua
 -- Vim cheatsheet, look for folds keys: https://devhints.io/vim
-vim.opt.foldmethod = "expr" -- default is "normal"
+vim.opt.foldmethod = "expr"                     -- default is "normal"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- default is ""
-vim.opt.foldenable = false -- if this option is true and fold method option is other than normal, every time a document is opened everything will be folded.
+vim.opt.foldenable = false                      -- if this option is true and fold method option is other than normal, every time a document is opened everything will be folded.
 
 -- Set blinking cursor
 -- vim.cmd(":set guicursor+=a:blinkwait700-blinkon400-blinkoff250")
@@ -41,6 +41,8 @@ lvim.keys.normal_mode["<C-a>"] = "ggVG"
 -- lvim.keys.visual_mode["L"] = "$"
 -- lvim.keys.normal_mode["gt"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["gT"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<leader>o"] = "o<Esc>0\"_D"
+lvim.keys.normal_mode["<leader>O"] = "O<Esc>0\"_D"
 
 lvim.builtin.which_key.mappings["bC"] = {
     "<cmd>%bd|e#|bd#<cr>", "Close all buffers but the current one"
