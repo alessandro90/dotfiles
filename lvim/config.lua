@@ -6,6 +6,7 @@
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.relativenumber = true
+vim.opt.foldlevel = 99
 
 -- folding powered by treesitter
 -- https://github.com/nvim-treesitter/nvim-treesitter#folding
@@ -79,7 +80,7 @@ lvim.builtin.which_key.mappings["q"] = { ":qa<cr>", "Quit" }
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 
 -- -- Change theme settings
-lvim.colorscheme = "tokyonight-storm"
+lvim.colorscheme = "catppuccin"
 -- lvim.colorscheme = "lunar"
 lvim.transparent_window = true
 
@@ -212,8 +213,8 @@ lvim.plugins = {
         branch = 'v2',
         config = function()
             require("hop").setup()
-            vim.api.nvim_set_keymap("n", "S", ":HopChar2<cr>", { silent = true })
-            vim.api.nvim_set_keymap("n", "s", ":HopWord<cr>", { silent = true })
+            vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
+            vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
         end,
     },
     {
@@ -248,11 +249,18 @@ lvim.plugins = {
         }
     },
     {
-        -- "AlexvZyl/nordic.nvim",
-        "folke/tokyonight.nvim",
+        "catppuccin/nvim",
+        name = "catppuccin",
         lazy = false,
         priority = 1000,
-        opts = {},
+        config = function()
+            require("catppuccin").setup({
+                flavour = "frappe",
+                no_italic = true,
+                no_bold = true,
+                no_underline = true
+            })
+        end
     },
     {
         "simrat39/rust-tools.nvim",
@@ -315,17 +323,6 @@ lvim.plugins = {
             }
         end
     }
-    -- {
-    --     "catppuccin/nvim",
-    --     name = "catppuccin"
-    -- }
-    -- {
-    --     "folke/todo-comments.nvim",
-    --     event = "BufRead",
-    --     config = function()
-    --         require("todo-comments").setup()
-    --     end,
-    -- }
 }
 
 ---- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
