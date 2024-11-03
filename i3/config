@@ -172,7 +172,7 @@ bindsym $mod+r mode "resize"
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal --default-working-directory=/home/ale/Data
+bindsym $mod+Return exec xfce4-terminal 
 
 # kill focused window
 bindsym $mod+q kill
@@ -384,7 +384,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /home/ale/Data/pics/backgrounds/downloads/untlited_3.jpg
+exec --no-startup-id sleep 1 && feh --bg-fill /home/ale/Pictures/w0.jpg
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -395,6 +395,9 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 # use xautolock to use autosuspend rules for mobile devices
 # https://wiki.archlinux.org/title/Session_lock#xautolock
 #exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
+
+# Monitor refresh rate
+exec --no-startup-id xrandr -r 240
 
 
 # xscreensaver
