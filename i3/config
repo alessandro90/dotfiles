@@ -387,7 +387,8 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 exec --no-startup-id sleep 1 && feh --bg-fill /home/ale/Pictures/w0.jpg
 
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+# exec --no-startup-id xset s 480 dpms 600 600 600
+exec --no-startup-id xset s 480 dpms 600 0 0
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
@@ -420,7 +421,7 @@ exec --no-startup-id /usr/bin/dunst
 #exec_always --no-startup-id autotiling
 
 # Autostart apps as you like
-exec --no-startup-id sleep 2 && xfce4-terminal --default-working-directory=/home/ale/Data
+exec --no-startup-id sleep 2 && xfce4-terminal
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
 
