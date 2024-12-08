@@ -142,6 +142,12 @@ bindcode $mod+Shift+80 	 move container to workspace  $ws8
 bindcode $mod+Shift+81 	 move container to workspace  $ws9
 bindcode $mod+Shift+90 	 move container to workspace  $ws10
 
+mode "pass-through" {
+    bindsym $mod+Shift+t mode "default"
+}
+
+bindsym $mod+Shift+t mode "pass-through"
+
 # resize window (you can also use the mouse for that):
 mode "resize" {
 # These bindings trigger as soon as you enter the resize mode
@@ -384,7 +390,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /home/ale/Pictures/w0.jpg
+exec --no-startup-id sleep 1 && feh --bg-fill /home/ale/Pictures/w7.jpg
 
 # set powersavings for display:
 # exec --no-startup-id xset s 480 dpms 600 600 600
