@@ -3,6 +3,7 @@
 !polybar
 !polybar/*
 !polybar/*/*
+polybar/show_temps
 !rofi
 !rofi/*
 !rofi/*/*
