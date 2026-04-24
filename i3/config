@@ -327,6 +327,7 @@ for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
 for_window [class=Thunderbird] focus
 for_window [class=TelegramDesktop] focus
+for_window [class="Yad"] floating enable, move position 2300 40
 
 ##############
 # compositor #
@@ -390,11 +391,11 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /home/ale/Pictures/w7.jpg
+exec --no-startup-id sleep 1 && feh --bg-fill --randomize /home/ale/Pictures/wallpapers/*
 
 # set powersavings for display:
-# exec --no-startup-id xset s 480 dpms 600 600 600
-exec --no-startup-id xset s 480 dpms 600 0 0
+exec --no-startup-id xset s off dpms 600 600 600
+# exec --no-startup-id xset s 480 dpms 600 0 0
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
@@ -404,7 +405,7 @@ exec --no-startup-id xset s 480 dpms 600 0 0
 #exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
 
 # Monitor refresh rate
-exec --no-startup-id xrandr -r 240
+exec --no-startup-id xrandr -r 180
 
 
 # xscreensaver
@@ -431,6 +432,7 @@ exec --no-startup-id sleep 2 && xfce4-terminal
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
 
+exec --no-startup-id caffeine
 ###############
 # system tray #
 ###############
