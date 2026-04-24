@@ -1,0 +1,15 @@
+*
+!picom
+!polybar
+!polybar/*
+!polybar/*/*
+!rofi
+!rofi/*
+!rofi/*/*
+!i3
+!i3/scripts
+!i3/config
+!i3/i3blocks.conf
+!i3/keybindings
+!dusnt/
+!.gitignore
