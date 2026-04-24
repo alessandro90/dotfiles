@@ -5,7 +5,9 @@
 !polybar/*/*
 polybar/show_temps
 !rofi
-!rofi/*
+!rofi/config.rasi
+!rofi/power-profiles.rasi
+!rofi/rofikeyhint.rasi
 !rofi/*/*
 !i3
 !i3/scripts
